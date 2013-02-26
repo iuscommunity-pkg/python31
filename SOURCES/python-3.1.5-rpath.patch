@@ -1,0 +1,11 @@
+--- Python-3.1.5/configure.orig	2012-04-12 09:11:31.786759140 -0500
++++ Python-3.1.5/configure	2012-04-12 09:11:55.999467914 -0500
+@@ -4872,7 +4872,7 @@
+ 	  ;;
+     OSF*)
+ 	  LDLIBRARY='libpython$(VERSION).so'
+-	  BLDLIBRARY='-rpath $(LIBDIR) -L. -lpython$(VERSION)'
++	  BLDLIBRARY='-L. -lpython$(VERSION)'
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
+ 	  ;;
+     atheos*)

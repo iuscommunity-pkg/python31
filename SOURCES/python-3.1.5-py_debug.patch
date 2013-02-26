@@ -1,0 +1,27 @@
+#
+# http://hg.python.org/cpython/rev/64bb1d258322
+#
+--- Python-3.1.5/Objects/bytesobject.c.orig	2012-04-12 12:08:54.921471753 -0500
++++ Python-3.1.5/Objects/bytesobject.c	2012-04-12 12:09:48.416895164 -0500
+@@ -896,7 +896,9 @@
+     register unsigned char *p;
+     register long x;
+ 
++#ifdef Py_DEBUG
+     assert(_Py_HashSecret_Initialized);
++#endif
+     if (a->ob_shash != -1)
+         return a->ob_shash;
+     len = Py_SIZE(a);
+--- Python-3.1.5/Objects/unicodeobject.c.orig	2012-04-12 12:10:43.365302649 -0500
++++ Python-3.1.5/Objects/unicodeobject.c	2012-04-12 12:11:11.367000600 -0500
+@@ -7341,7 +7341,9 @@
+     Py_UNICODE *p;
+     long x;
+ 
++#ifdef Py_DEBUG
+     assert(_Py_HashSecret_Initialized);
++#endif
+     if (self->hash != -1)
+         return self->hash;
+     len = Py_SIZE(self);

@@ -1,0 +1,8 @@
+--- Tools/scripts/pathfix.py
++++ Tools/scripts/pathfix.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python3
++#!/usr/bin/python3.1
+ 
+ # Change the #! line occurring in Python scripts.  The new interpreter
+ # pathname must be given with a -i option.
